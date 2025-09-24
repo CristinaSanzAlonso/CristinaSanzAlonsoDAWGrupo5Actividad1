@@ -1,4 +1,4 @@
-/*Iniciamos todo a  cero para que no haya márgenes o paddings predeterminados por el navegador*/
+/*Iniciamos todo a cero para que no haya márgenes o paddings predeterminados por el navegador*/
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +57,7 @@ ul {
 }
 
 #menu li a {
+    /*da estilo a las palabras del menú*/
     color: rgb(49, 9, 9);
     background-color: rgb(255, 238, 0);
     padding: 0.5rem;
@@ -68,7 +69,7 @@ ul {
 }
 
 #menu li a:hover {
-    /*Para que cambie el estilo cuando se pasa el ratón por encima*/
+    /*Para que cambie el estilo de las palabras del menú cuando se pasa el ratón por encima*/
     background-color: rgb(49, 9, 9);
     color: rgb(255, 238, 0);
 }
@@ -76,22 +77,26 @@ ul {
 /*Da estilo al pie de página*/
 
 footer {
+    /*da estilo al elemento padre del footer*/
     background-image: url(../img/imagenportada.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 footer .contenedor {
+    /*hace le contenedor flexible apra que podamos organizar los elementos en linea*/
     display: flex;
     justify-content: center;
 }
 
 footer .contenedor .columna {
+    /*da estilo a los diferentes div que forman las columnas del footer*/
     padding: 2rem 5rem 2rem 5rem;
     text-align: center;
 }
 
 footer .contenedor .columna p {
+    /*da estilo al texto del footer*/
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-family: texto;
@@ -158,7 +163,7 @@ img {
 }
 
 .estructura #lista ion-icon {
-    /*Daestilo a los iconos que he utilizado*/
+    /*Da estilo a los iconos que he utilizado*/
     font-size: 3rem;
     color: rgb(255, 149, 0);
 }
@@ -180,9 +185,11 @@ img {
 
 #flipcards {
     margin-top: 5rem;
+    /*hace que las flipcards este en fila*/
     flex-direction: row;
     display: flex;
     justify-content: center;
+    /*dejamos espacio entre cada una de las tarjetas*/
     gap: 40px;
     padding: 1.5rem;
 }
@@ -191,16 +198,17 @@ img {
 .card {
     width: 25rem;
     height: 25rem;
+    /*da profundidad a la tarjeta*/
     perspective: 100rem;
 }
 
-/*Da estilo a ambas caras de la tarjeta*/
+/*Da estilo a la caras de las tarjetas*/
 .card .face {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden;
     /*ocultamos el lado posterior del elemento*/
+    backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.5s;
@@ -240,6 +248,7 @@ img {
     padding-top: 1rem;
 }
 
+/*Da estilo al contenido de la cara trasera*/
 .card .back {
     /*Rota la cara trasera en 180 para que no se vea*/
     transform: rotateY(180deg);
@@ -251,13 +260,16 @@ img {
 
 /*Al pasar el ratón por encima el efecto hover hará que se de la vuelta la tarjeta*/
 .card:hover .front {
+    /*la cara delantera se gira para que no se vea*/
     transform: rotateY(180deg);
 }
 
 .card:hover .back {
+    /*la cara trasera aparece girando por completo*/
     transform: rotateY(360deg);
 }
 
+/*Da estilo al texto que hay por detrás de la tarjeta*/
 .card .back p {
     text-align: center;
     color: white;
@@ -269,6 +281,7 @@ img {
     padding-bottom: 2.5rem;
 }
 
+/*Da estilo al enlace que hay detrás de la tarjeta*/
 .card .back a {
     font-family: texto;
     font-size: 20px;
@@ -281,6 +294,7 @@ img {
     text-align: center;
 }
 
+/*Cambia los colores de la letra y el fondo al pasar el ratón*/
 .card .back a:hover {
     color: rgb(255, 238, 0);
     background-color: rgb(49, 9, 9);
@@ -289,6 +303,7 @@ img {
 
 /*INSTALACIONES.HTML*/
 
+/*Da estilo al texto*/
 #aulas {
     text-align: center;
     padding: 4rem;
@@ -297,16 +312,19 @@ img {
     color: rgb(255, 149, 0);
 }
 
+/*Da estilo al div que contiene las imágenes y los textos*/
 #aulas .aula {
     padding: 2rem;
 }
 
+/*Da estilo a las imágenes*/
 #aulas .aula img {
     width: 50%;
     height: 50%;
     border-radius: 2rem;
 }
 
+/*Da estilo al texto*/
 #aulas .aula p {
     font-family: texto;
     color: black;
@@ -314,6 +332,7 @@ img {
 
 /*CONTACTO.HTML*/
 
+/*Da estilo a los dos textos*/
 h1,
 h3 {
     text-align: center;
@@ -330,11 +349,14 @@ h3 {
     color: rgb(49, 9, 9);
 }
 
+/*Da estilo al formulario*/
 form {
     text-align: center;
+
     display: block;
 }
 
+/*Da estilo a los fieldset*/
 fieldset {
     width: 20%;
     margin: auto;
@@ -345,6 +367,7 @@ fieldset {
     border-color: rgb(255, 149, 0);
 }
 
+/*Da estilo al texto de legend*/
 legend {
     padding: 1rem;
     font-family: titulo;
@@ -353,6 +376,7 @@ legend {
     border-radius: 10px;
 }
 
+/*Da estilo a las etiquetas del formulario*/
 label {
     font-family: texto;
     color: rgb(49, 9, 9);
@@ -364,15 +388,18 @@ input {
     display: flex;
 }
 
+/*Da estilo a los desplegables de select*/
 select {
     display: block;
 }
 
+/*Da estilo al area para comentarios*/
 textarea {
     width: 20rem;
     height: 8rem;
 }
 
+/*Da estilo al botón*/
 #boton {
     margin: auto;
     margin-top: 1.5rem;
