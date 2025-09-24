@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Escuela Infantil Globos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo" id="imagenlogo">
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="servicios.html" target="_blank">SERVICIOS</a></li>
+                <li><a href="instalaciones.html" target="_blank">INSTALACIONES</a></li>
+                <li><a href="contacto.html" target="_blank">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>FORMULARIO DE CONTACTO</h1>
+        <h3>Para contactar con nuestra escuela déjanos tus datos de contacto en el siguiente
+            formulario y te contactaremos en la mayor brevedad posible</h3>
+        <form action="mailto:escuelainfantilglobos@gmail.com">
+            <fieldset>
+                <legend>DATOS PERSONALES</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido">
+                <label for="telefono">Teléfono de contacto:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </fieldset>
+            <fieldset id="otrosdatos">
+                <legend>OTROS DATOS DE INTERÉS</legend>
+                <label for="aula">Aula de interés</label>
+                <select id="aula" name="aula">
+                    <option disabled selected>Selecciona un aula</option>
+                    <option value="bebe">Aula de bebés</option>
+                    <option value="12">Aula de 1-2 años</option>
+                    <option value="23">Aula de 2-3 años</option>
+                </select>
+                <label for="curso">Curso</label>
+                <select id="curso" name="curso">
+                    <option disabled selected>Selecciona un curso</option>
+                    <option>2025/2026</option>
+                    <option>2026/2027</option>
+                </select>
+            </fieldset>
+            <fieldset id="comentarios">
+                <legend for="comentario">COMENTARIOS</legend>
+                <textarea id="comentario" placeholder="Déjanos tu comentario aquí"></textarea>
+            </fieldset>
+            <input id="boton" type="submit"></input>
+        </form>
+        <div class="estructura">
+            <div id="localizacion">
+                <h2>¿Dónde estamos?</h2>
+                <!--Inserto un mapa desde google maps copiando desde la web-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2552.7099342362976!2d-3.
+                687755868367259!3d40.45975837000292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42
+                291bc366bf09%3A0xdfb0bc55d8e7ac6b!2sC.%20de%20Juan%20Hurtado%20de%20Mendoza%2C%205%2C%20Cha
+                mart%C3%ADn%2C%2028036%20Madrid!5e0!3m2!1ses!2ses!4v1758372901936!5m2!1ses!2ses" width="600"
+                    height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-
+                when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="contenedor">
+            <div class="columna">
+                <p>C. de Juan Hurtado de Mendoza, 5</p>
+                <p>Chamartín, 28036 Madrid</p>
+            </div>
+            <div class="columna">
+                <p>Escuela Infantil Globos</p>
+                <p>08.00 - 18.00</p>
+            </div>
+            <div class="columna">
+                <p>Llámanos al:</p>
+                <p>917845262</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

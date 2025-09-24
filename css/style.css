@@ -1,0 +1,380 @@
+/*Iniciamos todo a  cero para que no haya márgenes o paddings predeterminados por el navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Utilizaré dos tipologías de letra que he descargado de google.font*/
+@font-face {
+    font-family: titulo;
+    src: url(../fonts/Comfortaa-Bold.ttf);
+}
+
+@font-face {
+    font-family: texto;
+    src: url(../fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+body {
+    background-color: rgba(239, 239, 175, 0.574);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/*Da estilo a la cabecera de la página y al menú*/
+
+header {
+    background-image: url(../img/imagenportada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#imagenlogo {
+    height: 15rem;
+    width: 15rem;
+}
+
+ul {
+    /*quitamos los puntos de la lista del menu*/
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+#menu li {
+    /*coloco el menú a la derecha*/
+    align-items: flex-end;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+}
+
+#menu li a {
+    color: rgb(49, 9, 9);
+    background-color: rgb(255, 238, 0);
+    padding: 0.5rem;
+    border-radius: 8%;
+    font-family: titulo;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+#menu li a:hover {
+    /*Para que cambie el estilo cuando se pasa el ratón por encima*/
+    background-color: rgb(49, 9, 9);
+    color: rgb(255, 238, 0);
+}
+
+/*Da estilo al pie de página*/
+
+footer {
+    background-image: url(../img/imagenportada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+footer .contenedor .columna {
+    padding: 2rem 5rem 2rem 5rem;
+    text-align: center;
+}
+
+footer .contenedor .columna p {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: texto;
+    font-weight: bold;
+    background-color: rgb(255, 238, 0);
+    color: rgb(49, 9, 9);
+}
+
+/*INDEX.HTML*/
+
+/*Da estilo a la tabla con los textos y las imágenes*/
+
+.estructura {
+    margin: 2rem;
+    text-align: justify;
+}
+
+.estructura table {
+    width: 100%;
+    padding: 3rem;
+}
+
+.estructura td {
+    align-items: center;
+    justify-items: center;
+}
+
+.estructura td,
+img {
+    text-align: center;
+}
+
+.estructura h2 {
+    padding: 3rem;
+    text-align: justify;
+    font-family: titulo;
+    color: rgb(255, 149, 0);
+    font-size: 3rem;
+}
+
+.estructura p {
+    padding: 3rem;
+    text-align: justify;
+    font-family: texto;
+}
+
+.imagen img {
+    height: 60%;
+    width: 60%;
+    border-radius: 4%;
+    vertical-align: middle;
+}
+
+/*Da estilo al div con la lista*/
+
+.estructura #lista {
+    list-style: none;
+    display: inline;
+    text-align: center;
+    font-family: texto;
+}
+
+.estructura .texto h2 {
+    text-align: center;
+}
+
+.estructura #lista ion-icon {
+    /*Daestilo a los iconos que he utilizado*/
+    font-size: 3rem;
+    color: rgb(255, 149, 0);
+}
+
+/*Da estilo al div con el mapa*/
+
+.estructura #localizacion {
+    text-align: center;
+}
+
+.estructura #localizacion h2 {
+    text-align: center;
+}
+
+
+/*SERVICIOS.HTML*/
+
+/*Da estilo a las flipcards*/
+
+#flipcards {
+    margin-top: 5rem;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 1.5rem;
+}
+
+/*Da estilo al contenedor padre*/
+.card {
+    width: 25rem;
+    height: 25rem;
+    perspective: 100rem;
+}
+
+/*Da estilo a ambas caras de la tarjeta*/
+.card .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    /*ocultamos el lado posterior del elemento*/
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/*Define los estilos generales de las dos caras de la tarjeta*/
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*Da estilo al contenido de la cara frontal*/
+.card .front {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: rgb(255, 149, 0) solid 0.2rem;
+}
+
+.card .front img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card .front h3 {
+    text-align: center;
+    font-family: titulo;
+    font-size: 30px;
+    color: rgb(255, 149, 0);
+    padding-top: 1rem;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    /*Rota la cara trasera en 180 para que no se vea*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 149, 0);
+}
+
+/*Al pasar el ratón por encima el efecto hover hará que se de la vuelta la tarjeta*/
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(360deg);
+}
+
+.card .back p {
+    text-align: center;
+    color: white;
+    font-family: texto;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.1rem;
+    padding-bottom: 2.5rem;
+}
+
+.card .back a {
+    font-family: texto;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(49, 9, 9);
+    background-color: rgb(255, 238, 0);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card .back a:hover {
+    color: rgb(255, 238, 0);
+    background-color: rgb(49, 9, 9);
+}
+
+
+/*INSTALACIONES.HTML*/
+
+#aulas {
+    text-align: center;
+    padding: 4rem;
+    font-family: titulo;
+    font-size: larger;
+    color: rgb(255, 149, 0);
+}
+
+#aulas .aula {
+    padding: 2rem;
+}
+
+#aulas .aula img {
+    width: 50%;
+    height: 50%;
+    border-radius: 2rem;
+}
+
+#aulas .aula p {
+    font-family: texto;
+    color: black;
+}
+
+/*CONTACTO.HTML*/
+
+h1,
+h3 {
+    text-align: center;
+    margin: 3rem;
+}
+
+h1 {
+    font-family: titulo;
+    color: rgb(255, 149, 0);
+}
+
+h3 {
+    font-family: texto;
+    color: rgb(49, 9, 9);
+}
+
+form {
+    text-align: center;
+    display: block;
+}
+
+fieldset {
+    width: 20%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-top: 3rem;
+    background-color: rgba(255, 149, 0, 0.57);
+    border-color: rgb(255, 149, 0);
+}
+
+legend {
+    padding: 1rem;
+    font-family: titulo;
+    color: rgb(49, 9, 9);
+    background-color: rgb(255, 238, 0);
+    border-radius: 10px;
+}
+
+label {
+    font-family: texto;
+    color: rgb(49, 9, 9);
+    padding: 0.5rem;
+}
+
+label,
+input {
+    display: flex;
+}
+
+select {
+    display: block;
+}
+
+textarea {
+    width: 20rem;
+    height: 8rem;
+}
+
+#boton {
+    margin: auto;
+    margin-top: 1.5rem;
+}
